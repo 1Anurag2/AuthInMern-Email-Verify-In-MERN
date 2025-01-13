@@ -22,13 +22,9 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 
-// const URI = 'mongodb+srv://email:6aHlwaDwVhW4VoMl@email.ljrii.mongodb.net/';
-// const DB_NAME = 'email';
-
 // ------------- Database Connection ----------
 const connectDB= async (URL)=>{
     try {
-        // const URL='mongodb+srv://ankit:123@cluster0.szlik.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
         const URL = 'mongodb+srv://email:6aHlwaDwVhW4VoMl@email.ljrii.mongodb.net/';
         await mongoose.connect(URL, { useUnifiedTopology: true, useNewUrlParser: true});
         console.log('Database Connected Succesfully');
